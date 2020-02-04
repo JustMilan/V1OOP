@@ -10,7 +10,10 @@ public class Student {
         return naam;
     }
 
+    @Override
     public String toString() {
-        return "studentnaam is " + naam;
+        return "Student{" +
+                "naam='" + naam + '\'' +
+                '}';
     }
 }

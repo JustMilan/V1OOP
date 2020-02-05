@@ -10,7 +10,7 @@ public class Student {
 
     public String getNaam() {return naam;}
 
-    public void setNaam(String naam) {this.naam = naam;}
+//    public void setNaam(String naam) {this.naam = naam;}
 
     public void setStudentNummer(int studentnummer) {this.studentnummer = studentnummer;}
 

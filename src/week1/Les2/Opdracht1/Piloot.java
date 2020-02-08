@@ -22,14 +22,14 @@ public class Piloot {
         salaris = sl;
     }
 
+    public void verhoogVliegurenMet(int vu) {
+        vlieguren = vu;
+    }
     public String toString() {
         return "Zonder vlieguren: " + naam + " Heeft " +
                 vlieguren + " vlieguren gemaakt en verdient " + salaris;
     }
 
-    public void verhoogVliegurenMet(int vu) {
-        vlieguren = vu;
-    }
 }
 
 

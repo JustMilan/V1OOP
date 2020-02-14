@@ -1,4 +1,4 @@
-package Practica.Practicum2;
+package Practica.Practicum2.A;
 
 public class Main {
     public static void main(String[] arg) {

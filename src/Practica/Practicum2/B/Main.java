@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Voetbalclub ajx = new Voetbalclub("Ajax      ");
         Voetbalclub feij = new Voetbalclub("Feijenoord");
+        Voetbalclub leeg = new Voetbalclub("");
 
         feij.verwerkResultaat('w');
         feij.verwerkResultaat('w');
@@ -16,6 +17,7 @@ public class Main {
 
         System.out.println(ajx);
         System.out.println(feij);
+        System.out.println(leeg);
     }
 }
 

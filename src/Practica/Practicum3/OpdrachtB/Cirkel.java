@@ -1,4 +1,4 @@
-package Practica.Practicum3.OpdrachtA.OpdrachtB;
+package Practica.Practicum3.OpdrachtB;
 
 public class Cirkel {
     private int radius;
@@ -11,12 +11,13 @@ public class Cirkel {
         this.yPositie = y;
 
         if (rad <= 0) {
-            return IllegalArgumentException;
+            throw new IllegalArgumentException("Radius moet groter dan 0 zijn!");
         }
     }
 
+
     @Override
     public String toString() {
-        return "Cirkel (" + xPositie + yPositie + ") met radius " + radius + Cirkel;
+        return "Cirkel (" + xPositie + " , " + yPositie + ") met radius " + radius;
     }
 }

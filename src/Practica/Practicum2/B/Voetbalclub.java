@@ -8,12 +8,16 @@ public class Voetbalclub {
 
     public Voetbalclub(String naam) {
 
-           if (!naam.equals("")) {
-               this.naam = naam;
+           if (naam == null || naam.equals("")) {
+               this.naam = "FC";
            }
            else {
-           this.naam = "FC";
+               this.naam = naam;
         }
+    }
+
+    public String getNaam() {
+        return naam;
     }
 
     public void verwerkResultaat(char ch) {

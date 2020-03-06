@@ -20,14 +20,14 @@ class VoetbalclubTest {
         System.out.println("winstPunten");
 
         t.verwerkResultaat('w');
-        assertEquals(3, (t.aantalGewonnen * 3));
+        assertEquals(3, (t.aantalPunten()));
     }
     @Test
     void gelijkPunten() {
         System.out.println("gelijkPunten");
 
         t.verwerkResultaat('g');
-        assertEquals(1, (t.aantalGelijk));
+        assertEquals(1, (t.aantalPunten()));
     }
 
     @Test
@@ -35,7 +35,7 @@ class VoetbalclubTest {
         System.out.println("verlorenPunten");
 
         t.verwerkResultaat('v');
-        assertEquals(0, t.aantalVerloren * 0);
+        assertEquals(0, t.aantalPunten());
     }
 
     @Test
@@ -58,9 +58,25 @@ class VoetbalclubTest {
         System.out.println(t1);
 
         assertEquals("Testclub1  10 4 3 3 15",
-                t1);
+                t1.toString());
 
 
+    }
+
+    @Test
+    void invoernull() {
+        System.out.println("invvoernull");
+
+        t1 = new Voetbalclub(null);
+
+        assertEquals("FC", t1.getNaam(), "Het systeem gaat niet goed om met een voetbalclub met naam null");
+    }
+
+    @Test
+    void invoerleeg() {
+        t1 = new Voetbalclub("");
+
+        assertEquals("FC", t1.getNaam());
     }
 }
 

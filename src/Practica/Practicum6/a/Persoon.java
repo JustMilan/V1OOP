@@ -16,10 +16,6 @@ public class Persoon {
         return budget;
     }
 
-    public ArrayList<Game> getMijnGames() {
-        return mijnGames;
-    }
-
     public boolean koop(Game g) {
         if ((budget - g.huidigeWaarde()) >= 0 && !mijnGames.contains(g)) {
             budget -= g.huidigeWaarde();
@@ -45,7 +41,7 @@ public class Persoon {
 
     @Override
     public String toString() {
-        StringBuilder output = new StringBuilder(String.format("%s heeft een budget van € %.2f en bezit de volgende games: ", naam, budget));
+        StringBuilder output = new StringBuilder(String.format("%s heeft een budget van €%.2f en bezit de volgende games:", naam, budget));
         for (Game game: mijnGames) {
             output.append(game.toString());
         }

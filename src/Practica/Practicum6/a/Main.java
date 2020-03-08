@@ -23,3 +23,22 @@ public class Main {
         System.out.println("\np1: " +p1+ "\n\np2: " +p2+ "\n");
     }
 }
+//
+//    p1 koopt g1: gelukt
+//        p1 koopt g2: gelukt
+//        p1 koopt g3: niet gelukt
+//
+//        p1: Eric heeft een budget van €132,82 en bezit de volgende games:
+//        Just Cause 3, uitgegeven in 2019; nieuwprijs: €49,98 nu voor: €34,99
+//        Need for Speed: Rivals, uitgegeven in 2019; nieuwprijs: €45,99 nu voor: €32,19
+//
+//        p2: Hans heeft een budget van €55,00 en bezit de volgende games:
+//
+//        p1 verkoopt g2 aan p2: gelukt
+//        p1 verkoopt g1 aan p2: niet gelukt
+//
+//        p1: Eric heeft een budget van €165,01 en bezit de volgende games:
+//        Just Cause 3, uitgegeven in 2019; nieuwprijs: €49,98 nu voor: €34,99
+//
+//        p2: Hans heeft een budget van €22,81 en bezit de volgende games:
+//        Need for Speed: Rivals, uitgegeven in 2019; nieuwprijs: €45,99 nu voor: €32,19

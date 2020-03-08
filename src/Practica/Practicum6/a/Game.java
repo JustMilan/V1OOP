@@ -19,7 +19,8 @@ public class Game {
     }
 
     public double huidigeWaarde() {
-        return nieuwprijs * LocalDate.now().getYear() - this.releasejaar;
+//        int verschil = LocalDate.now().getYear() - this.releasejaar;
+        return nieuwprijs * Math.pow(0.7, LocalDate.now().getYear() - this.releasejaar);
     }
 
     public boolean equals(Object andereObject) {
@@ -35,6 +36,6 @@ public class Game {
 
     @Override
     public String toString() {
-        return String.format("\n%s, uitgegeven in %d; nieuwprijs: €%.2f nu voor: €%.2f", this.naam, this.releasejaar, this.nieuwprijs, this.huidigeWaarde());
+        return String.format("%s, uitgegeven in %d; nieuwprijs: €%.2f nu voor: €%.2f", this.naam, this.releasejaar, this.nieuwprijs, this.huidigeWaarde());
     }
 }

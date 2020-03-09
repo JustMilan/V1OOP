@@ -21,7 +21,6 @@ class PersoonTest {
     private Persoon koper;
 
     private Persoon koperArm;
-
     private Persoon verkoper;
 
     private Game game1;

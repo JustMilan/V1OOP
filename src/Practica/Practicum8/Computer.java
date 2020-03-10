@@ -6,6 +6,7 @@ public class Computer implements Goed {
     private double aanschafPrijs;
     private int productieJaar;
 
+
     public Computer(String tp, String adr, double pr, int jr) {
         type = tp;
         macAdres = adr;
@@ -16,6 +17,7 @@ public class Computer implements Goed {
     @Override
     public double huidigeWaarde() {
         return 0;
+
     }
 
     @Override

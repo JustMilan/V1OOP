@@ -6,7 +6,6 @@ public class Game {
     private String naam;
     private int releasejaar;
     private double nieuwprijs;
-    private String mijnGames;
 
     public Game(String naam, int releasejaar, double nieuwprijs) {
         this.naam = naam;
@@ -19,7 +18,6 @@ public class Game {
     }
 
     public double huidigeWaarde() {
-//        int verschil = LocalDate.now().getYear() - this.releasejaar;
         return nieuwprijs * Math.pow(0.7, LocalDate.now().getYear() - this.releasejaar);
     }
 

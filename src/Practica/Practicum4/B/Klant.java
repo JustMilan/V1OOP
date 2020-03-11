@@ -21,4 +21,8 @@ public class Klant {
         return "Op naam van: " + naam +
                 "(korting: " + kortingsPercentage + "%)";
     }
+
+    public String getNaam() {
+        return naam;
+    }
 }

@@ -13,6 +13,10 @@ public class Auto {
         return prijsPerDag;
     }
 
+    public String getType() {
+        return type;
+    }
+
     public void setPrijsPerDag(double prijsPerDag) {
         this.prijsPerDag = prijsPerDag;
     }

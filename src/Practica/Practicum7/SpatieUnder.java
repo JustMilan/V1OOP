@@ -1,9 +1,13 @@
 package Practica.Practicum7;
 
-public class SpatieUnder implements OpmaakProces{ // Zelf toegevoegd om het te begrijpen.
+public class SpatieUnder extends VervangProces {
 
-    @Override
-    public String maakOp(String input) {
-        return input.replace(" ", "_");
+    public SpatieUnder(){
+        this(" ", "_");
     }
+
+    private SpatieUnder(String oud, String nieuw) {
+        super(oud, nieuw);
+    }
+
 }

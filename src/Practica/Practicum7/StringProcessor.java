@@ -8,8 +8,13 @@ public class StringProcessor {
     public StringProcessor() {}
 
     public String verwerk(String input) {
-        return input;
+        String temp = input;
+        for (OpmaakProces proces: processen) {
+            temp = proces.maakOp(temp);
+        }
+        return temp;
     }
-
-    public void voegProcesToe(OpmaakProces proces) {}
+    public void voegProcesToe(OpmaakProces proces) {
+        processen.add(proces);
+    }
 }

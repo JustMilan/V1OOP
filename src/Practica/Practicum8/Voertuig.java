@@ -24,7 +24,7 @@ public class Voertuig implements Goed {
 
     @Override
     public String toString() {
-        return String.format("%s heeft een nieuwprijs van %.2f en heeft bouwjaar %s", type, nieuwprijs, bouwjaar);
+        return String.format("%s heeft een waarde van %.2f en heeft bouwjaar %s", type, huidigeWaarde(), bouwjaar);
     }
 
     @Override

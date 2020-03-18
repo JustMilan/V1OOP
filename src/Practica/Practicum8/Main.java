@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         BedrijfsInventaris eerste = new BedrijfsInventaris("test", 350000);
 
-        Computer onderdeel1 = new Computer("Mac Pro", "1233215", 65000, 2020);
-        Computer onderdeel2 = new Computer("Mac Pro", "1233215", 65000, 2020);
+        Computer onderdeel1 = new Computer("Mac Pro", "1233215", 65000.6889, 2020);
+        Computer onderdeel2 = new Computer("Mac Pro", "1233215", 65000.6889, 2020);
 
         Auto eersteAuto = new Auto("Tesla model S", 120000, 2019, "420-K-69");
         Auto tweedeAuto = new Auto("Tesla model S", 120000, 2019, "420-K-69");

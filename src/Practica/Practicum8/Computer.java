@@ -27,14 +27,11 @@ public class Computer implements Goed {
         if (this == obj) {
             return true;
         }
-        if (obj instanceof Computer) {
-            return true;
-        }
-        return false;
+        return obj instanceof Computer;
     }
 
     @Override
     public String toString() {
-        return String.format("Computer %s, met macAdres %s koste %.2f en is gemaakt in %s", type, macAdres, aanschafPrijs, productieJaar);
+        return String.format("Computer %s, met macAdres %s koste " + Utils.euroBedrag(aanschafPrijs) + " en is gemaakt in %s", type, macAdres, productieJaar);
     }
 }

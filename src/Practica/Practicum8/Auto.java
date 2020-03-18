@@ -1,6 +1,6 @@
 package Practica.Practicum8;
 
-import java.util.Objects;
+import java.time.LocalDate;
 
 public class Auto extends Voertuig {
     private String kenteken;
@@ -12,12 +12,19 @@ public class Auto extends Voertuig {
 
     @Override
     public double huidigeWaarde() {
-        return super.huidigeWaarde();
+        return nieuwprijs * Math.pow(0.7, LocalDate.now().getYear() - this.bouwjaar);
     }
 
     @Override
+    // Wat is hier Object obj????
     public boolean equals(Object obj) {
-        return true;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Voertuig) {
+            return true;
+        }
+        return false;
     }
 
 }

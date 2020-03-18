@@ -1,6 +1,6 @@
 package Practica.Practicum8;
 
-import java.util.Objects;
+import java.time.LocalDate;
 
 public class Fiets extends Voertuig {
     private int framenummer;
@@ -13,11 +13,17 @@ public class Fiets extends Voertuig {
 
     @Override
     public double huidigeWaarde() {
-        return super.huidigeWaarde();
+        return nieuwprijs * Math.pow(0.9, LocalDate.now().getYear() - this.bouwjaar);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return true;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Fiets) {
+            return true;
+        }
+        return false;
     }
 }

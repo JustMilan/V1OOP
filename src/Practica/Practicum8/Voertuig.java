@@ -13,16 +13,18 @@ public class Voertuig implements Goed {
 
     @Override
     public boolean equals(Object obj) {
-        return true;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Voertuig) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public String toString() {
-        return "Voertuig{" +
-                "type='" + type + '\'' +
-                ", nieuwprijs=" + nieuwprijs +
-                ", bouwjaar=" + bouwjaar +
-                '}';
+        return String.format("%s heeft een nieuwprijs van %.2f en heeft bouwjaar %s", type, nieuwprijs, bouwjaar);
     }
 
     @Override

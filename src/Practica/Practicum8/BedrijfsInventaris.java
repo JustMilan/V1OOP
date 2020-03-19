@@ -14,14 +14,15 @@ public class BedrijfsInventaris {
 
     public void schafAan(Goed g) {
         if (!alleGoederen.contains(g) && g.huidigeWaarde() <= budget) {
-            alleGoederen.add(g);
             budget -= g.huidigeWaarde();
+            alleGoederen.add(g);
         }
     }
 
+
     @Override
     public String toString() {
-        StringBuilder output = new StringBuilder(String.format("Bedrijf %s heeft een budget van %.2f", bedrijfsnaam, budget));
+        StringBuilder output = new StringBuilder(String.format("Bedrijf %s heeft een budget €" + Utils.euroBedrag(budget), bedrijfsnaam, budget));
         for (Goed g : alleGoederen) {
             output.append('\n').append(g.toString());
         }

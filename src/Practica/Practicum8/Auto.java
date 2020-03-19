@@ -16,13 +16,13 @@ public class Auto extends Voertuig {
     }
 
     @Override
-    // Wat is hier Object obj????
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
-        if (obj instanceof Voertuig) {
-            return true;
+        if (obj instanceof Auto) {
+            Auto auto = (Auto) obj;
+            return super.equals(obj) && kenteken.equals(auto.kenteken);
         }
         return false;
     }

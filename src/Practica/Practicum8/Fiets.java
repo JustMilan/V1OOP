@@ -22,7 +22,8 @@ public class Fiets extends Voertuig {
             return true;
         }
         if (obj instanceof Fiets) {
-            return true;
+            Fiets fiets = (Fiets) obj;
+            return super.equals(obj) && framenummer == fiets.framenummer;
         }
         return false;
     }

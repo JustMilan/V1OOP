@@ -1,5 +1,7 @@
 package Practica.Practicum8;
 
+import java.time.LocalDate;
+
 public class Voertuig implements Goed {
     private String type;
     protected double nieuwprijs;
@@ -17,18 +19,19 @@ public class Voertuig implements Goed {
             return true;
         }
         if (obj instanceof Voertuig) {
-            return true;
+            Voertuig voertuig = (Voertuig) obj;
+            return type.equals(voertuig.type) && bouwjaar == voertuig.bouwjaar; //int is primitive dus kan geen equals
         }
         return false;
     }
 
     @Override
-    public String toString() {
-        return String.format("%s heeft een waarde van %.2f en heeft bouwjaar %s", type, huidigeWaarde(), bouwjaar);
+    public double huidigeWaarde() {
+        return nieuwprijs * Math.pow(0.7, LocalDate.now().getYear() - this.bouwjaar);
     }
 
     @Override
-    public double huidigeWaarde() {
-        return 0;
+    public String toString() {
+        return String.format("%s heeft een waarde van " + Utils.euroBedrag(huidigeWaarde()) + " en heeft bouwjaar %s", type, bouwjaar);
     }
 }

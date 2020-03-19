@@ -3,9 +3,11 @@ package Practica.Practicum8;
 public class Main {
     public static void main(String[] args) {
         BedrijfsInventaris eerste = new BedrijfsInventaris("test", 350000);
+        BedrijfsInventaris skeer = new BedrijfsInventaris("skeer", 200000);
 
-        Computer onderdeel1 = new Computer("Mac Pro", "1233215", 65000.6889, 2020);
-        Computer onderdeel2 = new Computer("Mac Pro", "1233215", 65000.6889, 2020);
+        Computer onderdeel1 = new Computer("Mac Pro", "1233215", 65000.6819, 2020);
+        Computer onderdeel2 = new Computer("Mac Pro", "1233215", 65000.6819, 2020);
+        Computer onderdeel3 = new Computer("Surface Pro", "420420", 15300, 2019);
 
         Auto eersteAuto = new Auto("Tesla model S", 120000, 2019, "420-K-69");
         Auto tweedeAuto = new Auto("Tesla model S", 120000, 2019, "420-K-69");
@@ -17,14 +19,26 @@ public class Main {
 
         eerste.schafAan(onderdeel1);
         eerste.schafAan(onderdeel2);
+        eerste.schafAan(onderdeel3);
         eerste.schafAan(eersteAuto);
         eerste.schafAan(tweedeAuto);
         eerste.schafAan(derdeAuto);
         eerste.schafAan(fietsie1);
         eerste.schafAan(fietsie2);
         eerste.schafAan(fietsie3);
-        System.out.println(eerste.toString());
 
+        skeer.schafAan(onderdeel1);
+        skeer.schafAan(onderdeel2);
+        skeer.schafAan(onderdeel3);
+        skeer.schafAan(eersteAuto);
+        skeer.schafAan(tweedeAuto);
+        skeer.schafAan(derdeAuto);
+        skeer.schafAan(fietsie1);
+        skeer.schafAan(fietsie2);
+        skeer.schafAan(fietsie3);
+
+        System.out.println(eerste);
+        System.out.println(skeer);
     }
 }
 

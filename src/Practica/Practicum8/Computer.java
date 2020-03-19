@@ -27,11 +27,16 @@ public class Computer implements Goed {
         if (this == obj) {
             return true;
         }
-        return obj instanceof Computer;
+        if (obj instanceof Computer) {
+            Computer pc = (Computer) obj;
+            return type.equals(pc.type) && productieJaar == pc.productieJaar; //int is primitive dus kan geen equals
+        }
+        return false;
     }
+
 
     @Override
     public String toString() {
-        return String.format("Computer %s, met macAdres %s koste " + Utils.euroBedrag(aanschafPrijs) + " en is gemaakt in %s", type, macAdres, productieJaar);
+        return String.format("Computer %s, met macAdres %s koste " + Utils.euroBedrag(huidigeWaarde()) + " en is gemaakt in %s", type, macAdres, productieJaar);
     }
 }

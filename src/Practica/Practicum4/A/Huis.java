@@ -20,7 +20,7 @@ public class Huis {
 
     @Override
     public String toString() {
-        return String.format("Huis %s is gebouwd in %d\nen heeft  %s" , adres, bouwjaar, huisbaas);
+        return String.format("Huis %s is gebouwd in %d\nen heeft %s" , adres, bouwjaar, huisbaas);
     }
 
 }

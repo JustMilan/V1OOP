@@ -23,7 +23,7 @@ public class Main {
         System.out.println("\np1: " +p1+ "\n\np2: " +p2+ "\n");
     }
 }
-//
+
 //    p1 koopt g1: gelukt
 //        p1 koopt g2: gelukt
 //        p1 koopt g3: niet gelukt

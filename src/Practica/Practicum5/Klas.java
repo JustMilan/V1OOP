@@ -5,23 +5,22 @@ import java.util.ArrayList;
 
 public class Klas {
     private String KlasCode;
-    private Leerling deLeerlingen;
-    ArrayList<Leerling> leerlingen = new ArrayList<Leerling>();
-    private Leerling leerling;
-    private double nweCijfer;
-    private String naam;
+    ArrayList<Leerling> leerlingen = new ArrayList<>();
 
     public Klas(String kC) {
         this.KlasCode = kC;
     }
 
     public void voegLeerlingToe(Leerling l) {
-        this.leerling = l;
+        leerlingen.add(l);
     }
 
-    public void wijzigCijfer(String nm, double nweCijfer){
-        String naam = nm;
-        this.nweCijfer = nweCijfer;
+    public void wijzigCijfer(String nm, double nweCijfer) {
+        for (Leerling leerling : leerlingen) {
+            if (leerling.getNaam().equals(nm)) {
+                leerling.setCijfer(nweCijfer);
+            }
+        }
     }
 
     public ArrayList<Leerling> getLeerling(){
@@ -39,8 +38,14 @@ public class Klas {
 
     @Override
     public String toString() {
-        return "In klas " + KlasCode + " zitten de volgende leerlingen: " +
-                deLeerlingen + "heeft cijfer: " + nweCijfer;
+        StringBuilder leerlingenResultaten = new StringBuilder();
+        for (Leerling leerling : leerlingen) {
+            leerlingenResultaten.append(leerling.toString()).append('\n');
+        }
+
+        return "In klas " + KlasCode + " zitten de volgende leerlingen: '\n" +
+                leerlingenResultaten;
+
     }
 }
 

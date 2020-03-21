@@ -37,8 +37,8 @@ public class AutoHuur {
     }
 
     public double totaalPrijs() {
-        if (gehuurdeAuto != null && aantalDagen != 0 && huurder.getKorting() != 0) {
-            double totaalprijs = 0;
+        if (gehuurdeAuto != null && huurder != null && aantalDagen != 0 && huurder.getKorting() != 0) {
+            double totaalprijs;
             double korting = (100 - huurder.getKorting()) / 100;
 
             totaalprijs = gehuurdeAuto.getPrijsPerDag() * aantalDagen * korting;

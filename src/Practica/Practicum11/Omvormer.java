@@ -34,7 +34,6 @@ public class Omvormer {
         out.close();
     }
 
-
     public static void main(String[] args) {
         System.out.print("Voer bronbestand in: ");
         Scanner keyboardScanner = new Scanner(System.in);

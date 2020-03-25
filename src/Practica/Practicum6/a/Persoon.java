@@ -37,11 +37,10 @@ public class Persoon {
 
         }
 
-
-
     @Override
     public String toString() {
-        StringBuilder output = new StringBuilder(String.format("%s heeft een budget van €%.2f en bezit de volgende games:", naam, budget));
+        StringBuilder output = new StringBuilder(String.format("%s heeft een budget van €%.2f en bezit de " +
+                "volgende games:", naam, budget));
         for (Game game: mijnGames) {
             output.append('\n').append(game.toString());
         }

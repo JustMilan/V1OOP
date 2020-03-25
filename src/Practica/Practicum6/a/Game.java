@@ -34,6 +34,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return String.format("%s, uitgegeven in %d; nieuwprijs: €%.2f nu voor: €%.2f", this.naam, this.releasejaar, this.nieuwprijs, this.huidigeWaarde());
+        return String.format("%s, uitgegeven in %d; nieuwprijs: €%.2f nu voor: €%.2f",
+                this.naam, this.releasejaar, this.nieuwprijs, this.huidigeWaarde());
     }
 }
